@@ -1,0 +1,178 @@
+/* ==== Base ==== */
+:root{
+  --bg1:#0f0617;
+  --bg2:#0b0614;
+  --card:#1b102e;
+  --accent:#a55df7;
+  --accent-2:#814ff0;
+  --text:#ffffff;
+  --muted:#c3b0f2;
+  --sub:#b9a4c9;
+  --shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:linear-gradient(135deg,#0f0617,#2e136a);
+}
+
+img{max-width:100%;display:block}
+
+/* ==== Utilities ==== */
+.section{padding:80px 60px}
+.section-title{
+  font-size:36px;
+  margin:0 0 14px;
+  color:#c79aff;
+}
+.section-sub{color:var(--sub);margin:0 0 30px;max-width:780px}
+.accent{color:#b179ff}
+
+.btn-outline{
+  display:inline-flex;gap:8px;align-items:center;
+  border:2px solid #b179ff;color:#b179ff;
+  padding:10px 18px;border-radius:28px;text-decoration:none;font-weight:600;
+}
+.btn-gradient,.hire-btn{
+  background:linear-gradient(to right,var(--accent),var(--accent-2));
+  color:#fff;border:none;border-radius:26px;
+  padding:12px 20px;font-weight:700;cursor:pointer;
+}
+.btn-gradient:hover,.hire-btn:hover{transform:translateY(-1px)}
+.icon-circle{
+  width:64px;height:64px;border-radius:50%;
+  background:linear-gradient(to right,var(--accent),var(--accent-2));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:24px;box-shadow:var(--shadow)
+}
+.icon-circle.sm{width:40px;height:40px;font-size:16px}
+.chip-list{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0;padding:0;list-style:none}
+.chip-list li{
+  font-size:12px;background:#25153f;border:1px solid #372157;
+  padding:4px 8px;border-radius:999px;color:#e7dfff
+}
+
+/* ==== Navbar ==== */
+.navbar{
+  position:sticky;top:0;z-index:50;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 24px;background:rgba(11,6,20,.7);backdrop-filter:blur(8px)
+}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{
+  background:#fff;color:#000;border-radius:50%;padding:10px 14px;
+  font-weight:800;font-size:22px
+}
+.brand-email{font-size:14px;color:#e9e1ff}
+
+.nav-links{display:flex;align-items:center;gap:18px}
+.nav-links a{color:#fff;text-decoration:none;font-weight:500}
+.hire-btn{margin-left:6px}
+
+/* Hamburger */
+.hamburger{
+  display:none;background:none;border:none;cursor:pointer;gap:5px;flex-direction:column
+}
+.hamburger span{width:26px;height:3px;background:#fff;border-radius:2px}
+
+/* Mobile nav */
+@media (max-width: 900px){
+  .nav-links{
+    position:absolute;right:16px;top:64px;display:none;flex-direction:column;
+    width:220px;background:#1b102e;padding:16px;border-radius:14px;box-shadow:var(--shadow)
+  }
+  .nav-links.show{display:flex}
+  .hamburger{display:flex}
+}
+
+/* ==== Hero ==== */
+.hero{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;
+  padding:70px 60px
+}
+.hero .intro h1{margin:0 0 10px;font-size:28px;color:#eaddff}
+.hero .intro h2{margin:0 0 16px;font-size:64px;line-height:1.08}
+.hero .intro p{color:#c2b9d2;max-width:560px}
+.hero-actions{display:flex;gap:24px;align-items:center;margin-top:24px}
+.socials a{color:#b179ff;font-size:20px;margin-right:8px}
+.hero-photo img{
+  width:100%;max-width:420px;border-radius:28px;transform:rotate(-2deg);
+  box-shadow:0 0 30px rgba(255,255,255,.06);margin-left:auto
+}
+@media (max-width: 900px){
+  .hero{grid-template-columns:1fr;text-align:left}
+  .hero-photo{order:-1}
+  .hero .intro h2{font-size:46px}
+}
+
+/* ==== Cards / grids ==== */
+.card-grid{
+  display:grid;gap:26px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+.service-card,.skill-card,.resume-card,.project-card{
+  background:var(--card);border-radius:18px;padding:22px;
+  box-shadow:var(--shadow);transition:transform .25s ease,opacity .4s ease;
+  opacity:0;transform:translateY(18px)
+}
+.service-card:hover,.skill-card:hover,.resume-card:hover,.project-card:hover{
+  transform:translateY(-4px)
+}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ==== Works / Portfolio ==== */
+.works{background:#0e0619}
+.works-header{display:flex;flex-wrap:wrap;align-items:end;gap:18px;justify-content:space-between}
+.filter-tabs{display:flex;gap:10px;background:#120825;padding:8px;border-radius:30px}
+.filter-btn{
+  background:transparent;border:none;color:#fff;padding:10px 18px;border-radius:24px;cursor:pointer
+}
+.filter-btn.active{background:linear-gradient(to right,var(--accent),var(--accent-2))}
+.portfolio-grid{
+  margin-top:28px;display:grid;gap:28px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr))
+}
+.project-card{padding:0;overflow:hidden;text-decoration:none;color:inherit}
+.project-card img{width:100%;height:180px;object-fit:cover;background:#10071e}
+.project-info{padding:18px}
+.project-info h3{margin:0 0 6px}
+
+/* ==== Resume two balanced columns ==== */
+.resume{background:var(--bg2);display:grid;gap:36px;grid-template-columns:repeat(2,1fr)}
+.resume .timeline{display:grid;gap:18px}
+.resume-card h4{color:var(--accent);margin:0 0 6px;font-size:14px}
+.resume-card h3{margin:0 0 8px}
+.resume-card p{margin:0;color:#c7b8d6}
+@media (max-width: 900px){ .resume{grid-template-columns:1fr}}
+
+/* ==== Skills ==== */
+.skills{background:#0f0619}
+
+/* ==== Contact ==== */
+.contact{display:grid;gap:36px;grid-template-columns:1.1fr .9fr;background:#0c0615}
+.form-row{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.contact-form input,.contact-form select,.contact-form textarea{
+  width:100%;background:#140a26;border:1px solid #281541;color:#fff;border-radius:10px;
+  padding:14px;font-size:14px;outline:none
+}
+.contact-form textarea{resize:none}
+@media (max-width: 900px){
+  .contact{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}
+.info-item{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.footer{padding:24px;text-align:center;color:#d9ccff;background:#0b0614;border-top:1px solid #1e1330}
+
+/* ==== Thank-you card extra (if loaded alone) ==== */
+.thank-you-card{
+  min-height:100dvh;display:grid;place-items:center;padding:40px;
+}
+.thank-you-card .card{
+  background:var(--card);padding:32px;border-radius:18px;text-align:center;box-shadow:var(--shadow);
+  max-width:520px
+}
+.thank-you-card .btn-gradient{margin-top:16px}

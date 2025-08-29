@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sakshi | Web & Backend Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-bxKk8+0HqzvGgQq2cQ9f0eG3n7c9N1+o5s1Fv4N1Q4d3Y4Vx1H7wS5KqF2Gbqz0n8e8O1cD9qQh4vS8Qm1wZ3A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar">
+    <div class="brand">
+      <div class="logo">G</div>
+      <span class="brand-email">sakshibhati180@gmail.com</span>
+    </div>
+
+    <nav class="nav-links" id="mainNav">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#portfolio" class="nav-link">Works</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <button class="hire-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+        Hire me!
+      </button>
+    </nav>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav" id="hamburgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <main class="hero">
+    <div class="intro">
+      <h1>I am Sakshi</h1>
+      <h2><span class="accent">Web Developer +</span><br><span class="accent">Backend Developer</span></h2>
+      <p>
+        I break down complex user experience problems to create integrity-focused solutions
+        that connect billions of people.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#" class="btn-outline">Download CV <i class="fa-solid fa-arrow-down"></i></a>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/sakshi142004" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/sakshi142004" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="tinuphoto.jpg" alt="Sakshi portrait">
+    </div>
+  </main>
+
+  <!-- ====== SERVICES ====== -->
+  <section id="services" class="services-section section">
+    <h2 class="section-title"><span class="accent">My</span> Services</h2>
+    <p class="section-sub">High-quality digital solutions—from sleek UIs to robust backends.</p>
+
+    <div class="card-grid">
+      <article class="service-card fade-in">
+        <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
+        <h3>Web Development</h3>
+        <p>Responsive, accessible, SEO-friendly websites crafted with modern stacks.</p>
+        <ul class="chip-list">
+          <li>HTML/CSS</li><li>JavaScript</li><li>Responsive</li>
+        </ul>
+      </article>
+
+      <article class="service-card fade-in">
+        <div class="icon-circle"><i class="fas fa-server"></i></div>
+        <h3>Backend Development</h3>
+        <p>Secure, scalable APIs and services tailored to product needs.</p>
+        <ul class="chip-list">
+          <li>Java</li><li>Spring</li><li>Flask</li>
+        </ul>
+      </article>
+
+      <article class="service-card fade-in">
+        <div class="icon-circle"><i class="fas fa-mobile-screen-button"></i></div>
+        <h3>Mobile App Development</h3>
+        <p>Custom Android apps with intuitive UX and smooth performance.</p>
+        <ul class="chip-list">
+          <li>Java</li><li>Android Studio</li>
+        </ul>
+      </article>
+
+      <article class="service-card fade-in">
+        <div class="icon-circle"><i class="fas fa-database"></i></div>
+        <h3>Database Design & Management</h3>
+        <p>Efficient schemas, migrations, and secure data operations.</p>
+        <ul class="chip-list">
+          <li>MySQL</li><li>SQLite</li><li>ORM</li>
+        </ul>
+      </article>
+
+      <article class="service-card fade-in">
+        <div class="icon-circle"><i class="fas fa-cogs"></i></div>
+        <h3>Custom Software Solutions</h3>
+        <p>Tailored tools & internal systems for real business outcomes.</p>
+        <ul class="chip-list">
+          <li>Integrations</li><li>Automation</li><li>Dashboards</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== WORKS / PORTFOLIO ====== -->
+  <section id="portfolio" class="works section">
+    <div class="works-header">
+      <h2 class="section-title"><span class="accent">My</span> Recent Works</h2>
+
+      <div class="filter-tabs" role="tablist" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="apps" role="tab">Apps</button>
+        <button class="filter-btn" data-filter="branding" role="tab">Branding</button>
+        <button class="filter-btn" data-filter="content" role="tab">Content</button>
+        <button class="filter-btn" data-filter="uxui" role="tab">UX/UI</button>
+      </div>
+    </div>
+
+    <div class="portfolio-grid" id="projects">
+      <!-- 🖼️ Indore Website (Branding/UXUI) -->
+      <a class="project-card fade-in" href="https://github.com/sakshi142004/city-website"
+         data-category="branding uxui">
+        <img src="indore_website.png" alt="Indore Website" />
+        <div class="project-info">
+          <h3>Indore Website</h3>
+          <p>Responsive city tourism platform built on the Full Java Stack (Spring + JSP).</p>
+        </div>
+      </a>
+
+      <!-- 📱 GeoMind (Apps) -->
+      <a class="project-card fade-in" href="https://github.com/Golu7723/GeoMind"
+         data-category="apps">
+        <img src="loginbackground1.webp" alt="GeoMind App" />
+        <div class="project-info">
+          <h3>GeoMind App</h3>
+          <p>Mindfulness geolocation Android app using Java and Android Studio.</p>
+        </div>
+      </a>
+
+      <!-- 🧑‍🎓 Academic Dashboard (Apps/Content) -->
+      <a class="project-card fade-in" href="https://github.com/sakshi142004/Academi_chat"
+         data-category="apps content">
+        <img src="academic_chat.png" alt="Academic Dashboard" />
+        <div class="project-info">
+          <h3>Academic Dashboard</h3>
+          <p>Flask-based student portal with WhatsApp API integration for real-time updates.</p>
+        </div>
+      </a>
+
+      <!-- 🧮 Calculator (Apps) -->
+      <a class="project-card fade-in" href="https://gist.github.com/sakshi142004/0f8b11f295ad87b9e7c0496e1297cc1f"
+         data-category="apps">
+        <img src="calculator.png" alt="Calculator" />
+        <div class="project-info">
+          <h3>Responsive Calculator</h3>
+          <p>JavaScript calculator with keyboard support and responsive layout.</p>
+        </div>
+      </a>
+
+      <!-- 📦 Inventory System (Apps/Branding) -->
+      <a class="project-card fade-in" href="#"
+         data-category="apps branding">
+        <img src="inventory_management_system.png" alt="Inventory System" />
+        <div class="project-info">
+          <h3>Inventory System</h3>
+          <p>Enterprise-grade full-stack inventory system in Java + Spring Boot + MySQL.</p>
+        </div>
+      </a>
+
+      <!-- 📝 Blog Layout (Content/UXUI) -->
+      <a class="project-card fade-in" href="https://gist.github.com/sakshi142004/ddf5e449a611ef99bb5cce966c31fd37"
+         data-category="content uxui">
+        <img src="blog_page.png" alt="Blog Layout" />
+        <div class="project-info">
+          <h3>Blog Page Layout</h3>
+          <p>Clean, semantic blog layout using HTML5 & SCSS.</p>
+        </div>
+      </a>
+
+      <!-- 📦 Landing Page (Branding/UXUI) -->
+      <a class="project-card fade-in" href="https://gist.github.com/sakshi142004/2fe79bac2adc45110d69d0753b5379e2"
+         data-category="branding uxui">
+        <img src="product_landing_page.png" alt="Product Landing Page" />
+        <div class="project-info">
+          <h3>Product Landing Page</h3>
+          <p>High-conversion landing page with focused CTAs.</p>
+        </div>
+      </a>
+
+      <!-- ☀️ Weather App (Apps) -->
+      <a class="project-card fade-in" href="https://github.com/sakshi142004/weather"
+         data-category="apps">
+        <img src="image.png" alt="Weather App" />
+        <div class="project-info">
+          <h3>Weather App</h3>
+          <p>Live forecast using HTML/CSS/JS + OpenWeather API.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ====== RESUME ====== -->
+  <section id="resume" class="resume section">
+    <div class="resume-column">
+      <h2 class="section-title"><i class="fas fa-award"></i> <span class="accent">My</span> Experience</h2>
+      <div class="timeline">
+        <article class="resume-card fade-in">
+          <h4>July 2025 – Present</h4>
+          <h3>Web Development Intern</h3>
+          <p>KodBud (Remote)</p>
+        </article>
+
+        <article class="resume-card fade-in">
+          <h4>Summer 2025</h4>
+          <h3>Contributor – GSSoC 2025</h3>
+          <p>GirlScript Summer of Code • Open-source contributor on web projects</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="resume-column">
+      <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span class="accent">My</span> Education</h2>
+      <div class="timeline">
+        <article class="resume-card fade-in">
+          <h4>2022 – 2025</h4>
+          <h3>BCA — Bachelor of Computer Applications</h3>
+          <p>School of Computer Science & IT, Devi Ahilya University, Indore</p>
+        </article>
+
+        <article class="resume-card fade-in">
+          <h4>Completed in 2022</h4>
+          <h3>Senior Secondary (12th Grade)</h3>
+          <p>Maharaja Yeshwantrao School, Indore</p>
+        </article>
+
+        <article class="resume-card fade-in">
+          <h4>2022 – 2024</h4>
+          <h3>Programming Certifications</h3>
+          <p>DSA, Core Java, Advanced Java</p>
+        </article>
+
+        <article class="resume-card fade-in">
+          <h4>2021 – 2022</h4>
+          <h3>Foundational Programming</h3>
+          <p>C & C++ (AISECT skill program)</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SKILLS ====== -->
+  <section id="skills" class="skills section">
+    <h2 class="section-title"><span class="accent">My</span> Skills</h2>
+    <p class="section-sub">I turn ideas into elegant and functional digital experiences.</p>
+
+    <div class="card-grid skills-grid">
+      <article class="skill-card fade-in">
+        <div class="icon-circle"><i class="fas fa-code"></i></div>
+        <h3>Programming</h3>
+        <p>C, C++, Java, Python</p>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="icon-circle"><i class="fab fa-java"></i></div>
+        <h3>Java</h3>
+        <p>Core & Advanced</p>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
+        <h3>Web</h3>
+        <p>HTML, CSS, JavaScript</p>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="icon-circle"><i class="fas fa-database"></i></div>
+        <h3>Databases</h3>
+        <p>MySQL, SQLite</p>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="icon-circle"><i class="fab fa-android"></i></div>
+        <h3>Android</h3>
+        <p>Java, Android Studio</p>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
+        <h3>Data Science</h3>
+        <p>Python, NumPy, Pandas</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section id="contact" class="contact section">
+    <div class="contact-left">
+      <h2 class="section-title"><span class="accent">Let’s</span> work together!</h2>
+      <p class="section-sub">
+        I design and code beautifully simple things and I love what I do.
+      </p>
+
+      <!-- FormSubmit -->
+      <form class="contact-form"
+            action="https://formsubmit.co/sakshibhati180%40gmail.com"
+            method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_next" value="https://sakshi142004.github.io/portfolio/thank-you.html">
+
+        <div class="form-row">
+          <input type="text" name="First_Name" placeholder="First name" required>
+          <input type="text" name="Last_Name" placeholder="Last name" required>
+        </div>
+
+        <div class="form-row">
+          <input type="email" name="Email" placeholder="Email address" required>
+          <input type="tel" name="Phone" placeholder="Phone number">
+        </div>
+
+        <select name="Reason" required>
+          <option value="">—Please choose an option—</option>
+          <option value="project">Start a project</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="hiring">Freelance inquiry</option>
+        </select>
+
+        <textarea name="Message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn-gradient">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-right">
+      <div class="info-item">
+        <div class="icon-circle sm"><i class="fas fa-envelope"></i></div>
+        <div class="info-text">sakshibhati180@gmail.com</div>
+      </div>
+      <div class="info-item">
+        <div class="icon-circle sm"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="info-text">Indore, M.P</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Sakshi • All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
