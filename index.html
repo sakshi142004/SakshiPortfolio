@@ -3,358 +3,338 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sakshi | Web & Backend Developer</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Sakshi designs modern business websites, e-commerce stores, AI web apps, portfolio websites, and polished frontend experiences." />
+  <title>Sakshi | Web Designer & Frontend Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-bxKk8+0HqzvGgQq2cQ9f0eG3n7c9N1+o5s1Fv4N1Q4d3Y4Vx1H7wS5KqF2Gbqz0n8e8O1cD9qQh4vS8Qm1wZ3A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="page-loader" aria-hidden="true"><span></span></div>
 
-  <!-- ====== NAVBAR ====== -->
-  <header class="navbar">
-    <div class="brand">
-      <div class="logo">G</div>
-      <span class="brand-email">sakshibhati180@gmail.com</span>
-    </div>
+  <header class="navbar" id="top">
+    <a href="#top" class="brand" aria-label="Sakshi portfolio home">
+      <span class="logo">S</span>
+    </a>
 
-    <nav class="nav-links" id="mainNav">
+    <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+      <a href="#about" class="nav-link">About</a>
       <a href="#services" class="nav-link">Services</a>
-      <a href="#portfolio" class="nav-link">Works</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#contact" class="nav-link">Contact</a>
-      <button class="hire-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
-        Hire me!
-      </button>
+      <a href="#portfolio" class="nav-link">Work</a>
+      <a href="#process" class="nav-link">Process</a>
+      
     </nav>
+
+    <button class="nav-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+      Contact
+    </button>
 
     <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav" id="hamburgerBtn">
       <span></span><span></span><span></span>
     </button>
   </header>
 
-  <!-- ====== HERO ====== -->
-  <main class="hero">
-    <div class="intro">
-      <h1>I am Sakshi</h1>
-      <h2><span class="accent">Web Developer +</span><br><span class="accent">Backend Developer</span></h2>
-      <p>
-        I break down complex user experience problems to create integrity-focused solutions
-        that connect billions of people.
-      </p>
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="shape shape-cube"></span>
+        <span class="shape shape-ring"></span>
+        <span class="particle p1"></span>
+        <span class="particle p2"></span>
+        <span class="particle p3"></span>
+      </div>
 
-      <div class="hero-actions">
-        <a href="#" class="btn-outline">Download CV <i class="fa-solid fa-arrow-down"></i></a>
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/sakshi142004" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/sakshi142004" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <div class="hero-copy">
+        <p class="eyebrow reveal-text">Creative web designer + frontend designer</p>
+        <h1 class="reveal-text">I Design Modern Websites That Feel Premium</h1>
+        <p class="hero-sub reveal-text">
+          I help brands grow online with business websites, e-commerce stores,
+          AI web apps, portfolio websites, and polished user interfaces.
+        </p>
+        <div class="hero-actions reveal-text">
+          <a href="#portfolio" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+       
+      </div>
+
+      <div class="hero-stage fade-in">
+        <div class="stage-card glass-card tilt-card" data-tilt>
+          <div class="speech-bubble">Clean layouts, smooth motion, strong first impression.</div>
+          <!-- Replace this Google Drive file ID if you want to use a different hero image.
+               Make sure the Drive file sharing is set to "Anyone with the link can view". -->
+          <img
+            class="hero-feature-image"
+            src="https://drive.google.com/thumbnail?id=1B0b5QG5gS_Xbb7tC96PNYk0YIH5Vdksk&sz=w1000"
+            alt="Sakshi portfolio creative visual">
+        </div>
+
+        <div class="floating-card card-one glass-card" data-depth="0.6">
+          <i class="fa-solid fa-store"></i>
+          <strong>E-commerce Websites</strong>
+          <small>Premium product pages, cart, wishlist, and mobile UI.</small>
+        </div>
+        <div class="floating-card card-two glass-card" data-depth="0.9">
+          <i class="fa-solid fa-pen-ruler"></i>
+          <strong>UI/UX Design</strong>
+          <small>Clear flows, polished visuals, and responsive layouts.</small>
         </div>
       </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="section-kicker">About</div>
+      <div class="split">
+        <div>
+          <h2 class="section-title">Hi, I'm Sakshi, a web designer focused on clean digital experiences.</h2>
+          <p class="section-sub">
+            I design modern business websites, e-commerce websites, AI web apps,
+            portfolio websites, and polished frontend interfaces that help businesses
+            build a strong online presence. My work blends clean UI, responsive
+            development, thoughtful content, and conversion-focused presentation.
+          </p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card fade-in tilt-card" data-tilt><strong data-count="100">0</strong><span>Web Design</span></article>
+          <article class="stat-card fade-in tilt-card" data-tilt><strong data-count="100">0</strong><span>UI/UX Design</span></article>
+          <article class="stat-card fade-in tilt-card" data-tilt><strong data-count="100">0</strong><span>E-commerce</span></article>
+          <article class="stat-card fade-in tilt-card" data-tilt><strong data-count="100">0</strong><span>Creative Branding</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services section">
+      <div class="section-kicker">Services</div>
+      <h2 class="section-title">Design services for modern brands, stores, and digital products.</h2>
+      <p class="section-sub">Each service is built around clear strategy, polished visuals, fast-loading pages, and responsive delivery.</p>
+
+      <div class="service-grid">
+        <article class="service-card fade-in tilt-card" data-tilt><div class="icon-box"><i class="fa-solid fa-layer-group"></i></div><h3>Website Design</h3><p>Modern business websites with clear sections, strong hierarchy, and smooth responsive layouts.</p></article>
+        <article class="service-card fade-in tilt-card" data-tilt><div class="icon-box"><i class="fa-solid fa-pen-ruler"></i></div><h3>UI/UX Design</h3><p>Clean interface concepts, user flows, visual systems, and screens that feel simple to use.</p></article>
+        <article class="service-card fade-in tilt-card" data-tilt><div class="icon-box"><i class="fa-solid fa-code"></i></div><h3>Frontend Design</h3><p>Responsive HTML, CSS, and JavaScript interfaces with polished interactions and tidy structure.</p></article>
+        <article class="service-card fade-in tilt-card" data-tilt><div class="icon-box"><i class="fa-solid fa-bolt"></i></div><h3>Landing Page Design</h3><p>Focused pages for offers, launches, and campaigns with persuasive content and clear CTAs.</p></article>
+        <article class="service-card fade-in tilt-card" data-tilt><div class="icon-box"><i class="fa-solid fa-cart-shopping"></i></div><h3>E-commerce Website Design</h3><p>Product-focused stores with premium catalog, cart, wishlist, login, and checkout UI.</p></article>
+        <article class="service-card fade-in tilt-card" data-tilt><div class="icon-box"><i class="fa-solid fa-id-card-clip"></i></div><h3>Portfolio Website Design</h3><p>Creative portfolio sites that show your work, story, skills, and contact path beautifully.</p></article>
+      </div>
+    </section>
+
+   <section id="portfolio" class="portfolio section">
+  <div class="works-header">
+    <div>
+      <div class="section-kicker">Selected Projects</div>
+      <h2 class="section-title">My project work with live websites and video previews.</h2>
+      <p class="section-sub">
+        Live projects open directly. Demo projects open in a video preview card.
+      </p>
     </div>
 
-    <div class="hero-photo">
-      <img src="tinuphoto.jpg" alt="Sakshi portrait">
+    <div class="filter-tabs" role="tablist" aria-label="Filter projects">
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="filter-btn" data-filter="websites" role="tab">Websites</button>
+      <button class="filter-btn" data-filter="ai" role="tab">AI Apps</button>
+      <button class="filter-btn" data-filter="ecommerce" role="tab">E-commerce</button>
     </div>
+  </div>
+
+  <div class="portfolio-grid" id="projects">
+    <article class="project-card project-live fade-in tilt-card" data-category="websites ecommerce" data-tilt>
+      <a href="https://www.belt-purse.com/" target="_blank" rel="noopener noreferrer" class="project-card-link">
+        <div class="project-media">
+          <img src="images/belt-purse-ProjectImage.png" alt="Belt Purse E-commerce Website">
+          <span class="project-badge live-badge">Live Website</span>
+        </div>
+        <div class="project-info">
+          <span>E-commerce / Live Project</span>
+          <h3>Belt Purse E-commerce Website</h3>
+          <p>Premium e-commerce website with product listing, product details, cart, wishlist, login, and responsive shopping UI.</p>
+          <div class="project-action">Open Live Website <i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card project-live fade-in tilt-card" data-category="websites" data-tilt>
+      <a href="https://gleeful-unicorn-a08df3.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card-link">
+        <div class="project-media">
+          <img src="images/weatherapp-ProjectImage.png" alt="Weather App">
+          <span class="project-badge live-badge">Live Website</span>
+        </div>
+        <div class="project-info">
+          <span>Weather App / Live Project</span>
+          <h3>Weather App</h3>
+          <p>API-based weather app with modern weather details, responsive layout, and clean frontend presentation.</p>
+          <div class="project-action">Open Live Website <i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card project-video fade-in tilt-card" data-category="ai websites" data-tilt
+      data-video="videos/ai-TextToImage-Project.mp4"
+      data-title="AI Text to Image Generator">
+      <button type="button" class="project-card-link open-video">
+        <div class="project-media">
+          <img src="images\ai-textTiImage-ProjectImage.png" alt="AI Text to Image Generator">
+          <span class="project-badge video-badge">Video Preview</span>
+          <span class="play-circle"><i class="fa-solid fa-play"></i></span>
+        </div>
+        <div class="project-info">
+          <span>AI Web App / Demo Project</span>
+          <h3>AI Text to Image Generator</h3>
+          <p>AI web app where users can generate images from text prompts using an image generation API.</p>
+          <div class="project-action">Watch Demo <i class="fa-solid fa-play"></i></div>
+        </div>
+      </button>
+    </article>
+
+    <article class="project-card project-video fade-in tilt-card" data-category="websites" data-tilt
+      data-video="videos/indore-web.mp4"
+      data-title="Indore City Website">
+      <button type="button" class="project-card-link open-video">
+        <div class="project-media">
+          <img src="images/Indore-web-ProjectImage.png" alt="Indore City Website">
+          <span class="project-badge video-badge">Video Preview</span>
+          <span class="play-circle"><i class="fa-solid fa-play"></i></span>
+        </div>
+        <div class="project-info">
+          <span>City Website / Demo Project</span>
+          <h3>Indore City Website</h3>
+          <p>Indore city guide website with places, food, gallery, visitor services, and responsive frontend design.</p>
+          <div class="project-action">Watch Demo <i class="fa-solid fa-play"></i></div>
+        </div>
+      </button>
+    </article>
+
+    <article class="project-card project-video fade-in tilt-card" data-category="websites" data-tilt
+      data-video="videos/academicChat-project.mp4"
+      data-title="Academic Chat Project">
+      <button type="button" class="project-card-link open-video">
+        <div class="project-media">
+          <img src="images/academicChat-projectImage.png" alt="Academic Chat Project">
+          <span class="project-badge video-badge">Video Preview</span>
+          <span class="play-circle"><i class="fa-solid fa-play"></i></span>
+        </div>
+        <div class="project-info">
+          <span>Academic Platform / Demo Project</span>
+          <h3>Academic Chat Project</h3>
+          <p>Student-focused academic chat platform with clean UI, dashboard feel, and portfolio-ready presentation.</p>
+          <div class="project-action">Watch Demo <i class="fa-solid fa-play"></i></div>
+        </div>
+      </button>
+    </article>
+
+   
+  </div>
+</section>
+
+<div class="project-modal" id="projectModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+
+  <div class="modal-card">
+    <button class="modal-close" type="button" aria-label="Close preview" data-close-modal>
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="modal-header">
+      <span>Project Preview</span>
+      <h3 id="modalTitle">Project Demo</h3>
+    </div>
+
+    <div class="modal-body">
+      <video id="projectVideo" controls playsinline></video>
+      <img id="projectImage" src="" alt="Project preview">
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <section id="process" class="process section">
+      <div class="section-kicker">Process</div>
+      <h2 class="section-title">A smooth workflow from concept to final brand-ready delivery.</h2>
+      <div class="process-line">
+        <article class="process-step fade-in tilt-card" data-tilt><span>01</span><h3>Discuss</h3><p>We define your goals, audience, brand tone, and project direction.</p></article>
+        <article class="process-step fade-in tilt-card" data-tilt><span>02</span><h3>Design</h3><p>I create website layouts, app screens, content sections, and visual direction.</p></article>
+        <article class="process-step fade-in tilt-card" data-tilt><span>03</span><h3>Revise</h3><p>We polish spacing, colors, animation, content, and responsive details.</p></article>
+        <article class="process-step fade-in tilt-card" data-tilt><span>04</span><h3>Deliver</h3><p>You get final assets, links, files, and clean handoff notes.</p></article>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section">
+      <div class="section-kicker">Skills</div>
+      <div class="split">
+        <div>
+          <h2 class="section-title">Creative design supported by practical development skills.</h2>
+          <p class="section-sub">I can design the visual identity and understand the build side, which helps websites feel polished and realistic.</p>
+        </div>
+        <div class="skill-cloud">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive UI</span>
+          <span>Landing Pages</span><span>E-commerce</span><span>AI App UI</span><span>UI/UX</span>
+          <span>Java</span><span>Spring</span><span>Flask</span><span>MySQL</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="contact-card glass-card fade-in">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Let's Build Your Digital Presence</h2>
+          <p class="section-sub">
+            Send your idea for a website, store, AI app, or portfolio. I will help shape it into a modern, memorable digital experience.
+          </p>
+          <div class="contact-buttons">
+            <a href="https://www.instagram.com/sakshi__webdev?igsh=aWNhbTdlOGg3bnls" class="btn btn-secondary"><i class="fa-brands fa-instagram"></i> Message on Instagram</a>
+            <!-- Replace this email if you want a different contact address. -->
+            <a href="mailto:sakshii.webdev@gmail.com" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Send Email</a>
+            
+          </div>
+        </div>
+
+      <form class="contact-form" id="contactForm">
+  <input type="hidden" name="access_key" value="e602bf7f-4651-4739-a94c-90934f9da145">
+  <input type="hidden" name="subject" value="New Portfolio Contact Message">
+
+  <div class="form-row">
+    <input type="text" name="First Name" placeholder="First name" required>
+    <input type="text" name="Last Name" placeholder="Last name" required>
+  </div>
+
+  <div class="form-row">
+    <input type="email" name="Email" placeholder="Email address" required>
+    <input type="tel" name="Phone" placeholder="Phone number">
+  </div>
+
+  <select name="Project Type" required>
+    <option value="">Choose project type</option>
+    <option value="Business website design">Business website design</option>
+    <option value="E-commerce website">E-commerce website</option>
+    <option value="AI web app design">AI web app design</option>
+    <option value="Portfolio website design">Portfolio website design</option>
+  </select>
+
+  <textarea name="Message" placeholder="Tell me about your project" rows="5" required></textarea>
+
+  <button type="submit" class="btn btn-primary">
+    Send Message <i class="fa-solid fa-paper-plane"></i>
+  </button>
+
+  <p class="form-message" id="formMessage"></p>
+</form>
+      </div>
+    </section>
   </main>
 
-  <!-- ====== SERVICES ====== -->
-  <section id="services" class="services-section section">
-    <h2 class="section-title"><span class="accent">My</span> Services</h2>
-    <p class="section-sub">High-quality digital solutions—from sleek UIs to robust backends.</p>
-
-    <div class="card-grid">
-      <article class="service-card fade-in">
-        <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
-        <h3>Web Development</h3>
-        <p>Responsive, accessible, SEO-friendly websites crafted with modern stacks.</p>
-        <ul class="chip-list">
-          <li>HTML/CSS</li><li>JavaScript</li><li>Responsive</li>
-        </ul>
-      </article>
-
-      <article class="service-card fade-in">
-        <div class="icon-circle"><i class="fas fa-server"></i></div>
-        <h3>Backend Development</h3>
-        <p>Secure, scalable APIs and services tailored to product needs.</p>
-        <ul class="chip-list">
-          <li>Java</li><li>Spring</li><li>Flask</li>
-        </ul>
-      </article>
-
-      <article class="service-card fade-in">
-        <div class="icon-circle"><i class="fas fa-mobile-screen-button"></i></div>
-        <h3>Mobile App Development</h3>
-        <p>Custom Android apps with intuitive UX and smooth performance.</p>
-        <ul class="chip-list">
-          <li>Java</li><li>Android Studio</li>
-        </ul>
-      </article>
-
-      <article class="service-card fade-in">
-        <div class="icon-circle"><i class="fas fa-database"></i></div>
-        <h3>Database Design & Management</h3>
-        <p>Efficient schemas, migrations, and secure data operations.</p>
-        <ul class="chip-list">
-          <li>MySQL</li><li>SQLite</li><li>ORM</li>
-        </ul>
-      </article>
-
-      <article class="service-card fade-in">
-        <div class="icon-circle"><i class="fas fa-cogs"></i></div>
-        <h3>Custom Software Solutions</h3>
-        <p>Tailored tools & internal systems for real business outcomes.</p>
-        <ul class="chip-list">
-          <li>Integrations</li><li>Automation</li><li>Dashboards</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- ====== WORKS / PORTFOLIO ====== -->
-  <section id="portfolio" class="works section">
-    <div class="works-header">
-      <h2 class="section-title"><span class="accent">My</span> Recent Works</h2>
-
-      <div class="filter-tabs" role="tablist" aria-label="Filter projects">
-        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-        <button class="filter-btn" data-filter="apps" role="tab">Apps</button>
-        <button class="filter-btn" data-filter="branding" role="tab">Branding</button>
-        <button class="filter-btn" data-filter="content" role="tab">Content</button>
-        <button class="filter-btn" data-filter="uxui" role="tab">UX/UI</button>
-      </div>
-    </div>
-
-    <div class="portfolio-grid" id="projects">
-      <!-- 🖼️ Indore Website (Branding/UXUI) -->
-      <a class="project-card fade-in" href="https://github.com/sakshi142004/city-website"
-         data-category="branding uxui">
-        <img src="indore_website.png" alt="Indore Website" />
-        <div class="project-info">
-          <h3>Indore Website</h3>
-          <p>Responsive city tourism platform built on the Full Java Stack (Spring + JSP).</p>
-        </div>
-      </a>
-
-      <!-- 📱 GeoMind (Apps) -->
-      <a class="project-card fade-in" href="https://github.com/Golu7723/GeoMind"
-         data-category="apps">
-        <img src="loginbackground1.webp" alt="GeoMind App" />
-        <div class="project-info">
-          <h3>GeoMind App</h3>
-          <p>Mindfulness geolocation Android app using Java and Android Studio.</p>
-        </div>
-      </a>
-
-      <!-- 🧑‍🎓 Academic Dashboard (Apps/Content) -->
-      <a class="project-card fade-in" href="https://github.com/sakshi142004/Academi_chat"
-         data-category="apps content">
-        <img src="academic_chat.png" alt="Academic Dashboard" />
-        <div class="project-info">
-          <h3>Academic Dashboard</h3>
-          <p>Flask-based student portal with WhatsApp API integration for real-time updates.</p>
-        </div>
-      </a>
-
-      <!-- 🧮 Calculator (Apps) -->
-      <a class="project-card fade-in" href="https://gist.github.com/sakshi142004/0f8b11f295ad87b9e7c0496e1297cc1f"
-         data-category="apps">
-        <img src="calculator.png" alt="Calculator" />
-        <div class="project-info">
-          <h3>Responsive Calculator</h3>
-          <p>JavaScript calculator with keyboard support and responsive layout.</p>
-        </div>
-      </a>
-
-      <!-- 📦 Inventory System (Apps/Branding) -->
-      <a class="project-card fade-in" href="#"
-         data-category="apps branding">
-        <img src="inventory_management_system.png" alt="Inventory System" />
-        <div class="project-info">
-          <h3>Inventory System</h3>
-          <p>Enterprise-grade full-stack inventory system in Java + Spring Boot + MySQL.</p>
-        </div>
-      </a>
-
-      <!-- 📝 Blog Layout (Content/UXUI) -->
-      <a class="project-card fade-in" href="https://gist.github.com/sakshi142004/ddf5e449a611ef99bb5cce966c31fd37"
-         data-category="content uxui">
-        <img src="blog_page.png" alt="Blog Layout" />
-        <div class="project-info">
-          <h3>Blog Page Layout</h3>
-          <p>Clean, semantic blog layout using HTML5 & SCSS.</p>
-        </div>
-      </a>
-
-      <!-- 📦 Landing Page (Branding/UXUI) -->
-      <a class="project-card fade-in" href="https://gist.github.com/sakshi142004/2fe79bac2adc45110d69d0753b5379e2"
-         data-category="branding uxui">
-        <img src="product_landing_page.png" alt="Product Landing Page" />
-        <div class="project-info">
-          <h3>Product Landing Page</h3>
-          <p>High-conversion landing page with focused CTAs.</p>
-        </div>
-      </a>
-
-      <!-- ☀️ Weather App (Apps) -->
-      <a class="project-card fade-in" href="https://github.com/sakshi142004/weather"
-         data-category="apps">
-        <img src="image.png" alt="Weather App" />
-        <div class="project-info">
-          <h3>Weather App</h3>
-          <p>Live forecast using HTML/CSS/JS + OpenWeather API.</p>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- ====== RESUME ====== -->
-  <section id="resume" class="resume section">
-    <div class="resume-column">
-      <h2 class="section-title"><i class="fas fa-award"></i> <span class="accent">My</span> Experience</h2>
-      <div class="timeline">
-        <article class="resume-card fade-in">
-          <h4>July 2025 – Present</h4>
-          <h3>Web Development Intern</h3>
-          <p>KodBud (Remote)</p>
-        </article>
-
-        <article class="resume-card fade-in">
-          <h4>Summer 2025</h4>
-          <h3>Contributor – GSSoC 2025</h3>
-          <p>GirlScript Summer of Code • Open-source contributor on web projects</p>
-        </article>
-      </div>
-    </div>
-
-    <div class="resume-column">
-      <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span class="accent">My</span> Education</h2>
-      <div class="timeline">
-        <article class="resume-card fade-in">
-          <h4>2022 – 2025</h4>
-          <h3>BCA — Bachelor of Computer Applications</h3>
-          <p>School of Computer Science & IT, Devi Ahilya University, Indore</p>
-        </article>
-
-        <article class="resume-card fade-in">
-          <h4>Completed in 2022</h4>
-          <h3>Senior Secondary (12th Grade)</h3>
-          <p>Maharaja Yeshwantrao School, Indore</p>
-        </article>
-
-        <article class="resume-card fade-in">
-          <h4>2022 – 2024</h4>
-          <h3>Programming Certifications</h3>
-          <p>DSA, Core Java, Advanced Java</p>
-        </article>
-
-        <article class="resume-card fade-in">
-          <h4>2021 – 2022</h4>
-          <h3>Foundational Programming</h3>
-          <p>C & C++ (AISECT skill program)</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== SKILLS ====== -->
-  <section id="skills" class="skills section">
-    <h2 class="section-title"><span class="accent">My</span> Skills</h2>
-    <p class="section-sub">I turn ideas into elegant and functional digital experiences.</p>
-
-    <div class="card-grid skills-grid">
-      <article class="skill-card fade-in">
-        <div class="icon-circle"><i class="fas fa-code"></i></div>
-        <h3>Programming</h3>
-        <p>C, C++, Java, Python</p>
-      </article>
-
-      <article class="skill-card fade-in">
-        <div class="icon-circle"><i class="fab fa-java"></i></div>
-        <h3>Java</h3>
-        <p>Core & Advanced</p>
-      </article>
-
-      <article class="skill-card fade-in">
-        <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
-        <h3>Web</h3>
-        <p>HTML, CSS, JavaScript</p>
-      </article>
-
-      <article class="skill-card fade-in">
-        <div class="icon-circle"><i class="fas fa-database"></i></div>
-        <h3>Databases</h3>
-        <p>MySQL, SQLite</p>
-      </article>
-
-      <article class="skill-card fade-in">
-        <div class="icon-circle"><i class="fab fa-android"></i></div>
-        <h3>Android</h3>
-        <p>Java, Android Studio</p>
-      </article>
-
-      <article class="skill-card fade-in">
-        <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
-        <h3>Data Science</h3>
-        <p>Python, NumPy, Pandas</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ====== CONTACT ====== -->
-  <section id="contact" class="contact section">
-    <div class="contact-left">
-      <h2 class="section-title"><span class="accent">Let’s</span> work together!</h2>
-      <p class="section-sub">
-        I design and code beautifully simple things and I love what I do.
-      </p>
-
-      <!-- FormSubmit -->
-      <form class="contact-form"
-            action="https://formsubmit.co/sakshibhati180%40gmail.com"
-            method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="box">
-        <input type="hidden" name="_next" value="https://sakshi142004.github.io/portfolio/thank-you.html">
-
-        <div class="form-row">
-          <input type="text" name="First_Name" placeholder="First name" required>
-          <input type="text" name="Last_Name" placeholder="Last name" required>
-        </div>
-
-        <div class="form-row">
-          <input type="email" name="Email" placeholder="Email address" required>
-          <input type="tel" name="Phone" placeholder="Phone number">
-        </div>
-
-        <select name="Reason" required>
-          <option value="">—Please choose an option—</option>
-          <option value="project">Start a project</option>
-          <option value="collaboration">Collaboration</option>
-          <option value="hiring">Freelance inquiry</option>
-        </select>
-
-        <textarea name="Message" placeholder="Message" rows="5" required></textarea>
-        <button type="submit" class="btn-gradient">Send Message</button>
-      </form>
-    </div>
-
-    <div class="contact-right">
-      <div class="info-item">
-        <div class="icon-circle sm"><i class="fas fa-envelope"></i></div>
-        <div class="info-text">sakshibhati180@gmail.com</div>
-      </div>
-      <div class="info-item">
-        <div class="icon-circle sm"><i class="fas fa-map-marker-alt"></i></div>
-        <div class="info-text">Indore, M.P</div>
-      </div>
-    </div>
-  </section>
-
   <footer class="footer">
-    <p>© <span id="year"></span> Sakshi • All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Sakshi. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/sakshi__webdev?igsh=aWNhbTdlOGg3bnls" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/sakshi142004" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      
+  
+    </div>
   </footer>
 
   <script src="script.js"></script>
